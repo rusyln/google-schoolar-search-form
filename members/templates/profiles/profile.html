@@ -1,0 +1,13 @@
+<form method="get">
+    {{ form }}
+    <button type="submit">Search</button>
+</form>
+
+{% if profiles %}
+    <h2>Search Results:</h2>
+    <ul>
+    {% for profile in profiles %}
+        <li>{{ profile }}</li>  <!-- Assuming profile is a string, update this accordingly -->
+    {% endfor %}
+    </ul>
+{% endif %}
