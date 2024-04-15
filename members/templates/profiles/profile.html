@@ -25,9 +25,12 @@
                   <h4 class="card-title">{{ profile.name }}</h4>
                   <p class="card-text">Affiliations: {{ profile.affiliations }}</p>
                   <p class="card-text">Cited by: {{ profile.cited_by }}</p>
+                  <p class="card-text">Author by: {{ profile.author_id }}</p>
+                 
                 </div>
                 <div class="card-footer">
-                  <a href="{{ profile.link }}" class="btn btn-primary" target="_blank">Profile Link</a>
+                  <a href="{{ profile.link }}" class="btn btn-primary" target="_blank">Google Schoolar Link</a>
+                  <a href="{% url 'profile_detail' author_id=profile.author_id %}" class="btn btn-primary" target="_blank">Profile Detail</a>
                 </div>
               </div>
             </div>
